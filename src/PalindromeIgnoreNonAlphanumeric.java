@@ -1,3 +1,4 @@
+
 /**
  * 
  */
@@ -20,6 +21,9 @@ public class PalindromeIgnoreNonAlphanumeric {
 
 	/** Return true if a string is a palindrome */
 	public static boolean isPalindrome(String s) {
+		
+		boolean status;
+		
 		// Create a new string by eliminating non-alphanumeric chars
 		String s1 = filter(s);
 
@@ -27,7 +31,12 @@ public class PalindromeIgnoreNonAlphanumeric {
 		String s2 = reverse(s1);
 
 		// Compare if the reversal is the same as the original string
-		return FILL_CODE_OR_CLICK_ANSWER;
+		if(s2.equals(s1)) {
+			status = true;
+		}else {
+			status = false;
+		}
+		return status;
 	}
 
 	/** Create a new string by eliminating non-alphanumeric chars */
@@ -43,13 +52,13 @@ public class PalindromeIgnoreNonAlphanumeric {
 		}
 
 		// Return a new filtered string
-		return FILL_CODE_OR_CLICK_ANSWER;
+		return stringBuilder.toString();
 	}
 
 	/** Create a new string by reversing a specified string */
   public static String reverse(String s) {
     StringBuilder stringBuilder = new StringBuilder(s);
-    FILL_CODE_OR_CLICK_ANSWER; // Invoke reverse in StringBuilder
+    stringBuilder.reverse(); // Invoke reverse in StringBuilder
     return stringBuilder.toString();
   }
 }
