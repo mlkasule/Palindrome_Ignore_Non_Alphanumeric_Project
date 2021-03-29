@@ -1,6 +1,7 @@
 
 /**
- * 
+ * A program that checks whether a string is a palindrome regardless of involved by filtering
+ * non-alpha-numeric characters out
  */
 
 import java.util.Scanner;
@@ -31,12 +32,7 @@ public class PalindromeIgnoreNonAlphanumeric {
 		String s2 = reverse(s1);
 
 		// Compare if the reversal is the same as the original string
-		if (s2.equals(s1)) {
-			status = true;
-		} else {
-			status = false;
-		}
-		return status;
+		return s2.equals(s1);
 	}
 
 	/** Create a new string by eliminating non-alphanumeric chars */
